@@ -1,0 +1,14 @@
+alias dwm-update="pushd ~/.suckless/dwm && sudo make clean install && popd"
+alias st-update="pushd ~/.suckless/st-flexipatch && sudo make clean install && popd"
+alias ls="ls --color=auto"
+alias diff='diff --color=auto'
+alias grep='grep --color=auto'
+alias ip='ip -color=auto'
+
+alias ua-drop-caches='sudo paccache -rk3; paru -Sc --aur --noconfirm'
+alias ua-update-all='export TMPFILE="$(mktemp)"; \
+	sudo true; \
+	rate-mirrors --save=$TMPFILE arch --max-delay=21600 \
+		&& sudo mv /etc/pacman.d/mirrorlist /etc/pacmand.d/mirrorlist-backup \
+		&& ua-drop-caches \
+		&& paru -Syyu --noconfirm'

@@ -1,0 +1,11 @@
+#!/usr/bin/sh
+sudo rm -rf awesome
+sudo rm -rf alacritty
+sudo rm -rf mpv
+sudo rm -rf zsh
+rm -f zshrc
+cp -rf ~/.config/awesome awesome
+cp -rf ~/.config/alacritty alacritty
+cp -rf ~/.config/mpv mpv
+cp -rf ~/.zsh zsh
+cp -rf ~/.zshrc zshrc
